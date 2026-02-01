@@ -1,4 +1,16 @@
-export const invitationData = {
+export interface InvitationData {
+    quinceanera: { nombre: string };
+    videos: { mobile: string; desktop: string };
+    textoPrincipal: string;
+    bendicion: string;
+    versiculo: string;
+    padres: { mama: string; papa: string };
+    evento: { fecha: string; misa: string; recepcion: string; lugar: string };
+    mensajeFinal: string;
+    contacto: { nombre: string; telefono: string; mensajeWhatsapp: string };
+}
+
+export const invitationData: InvitationData = {
     quinceanera: {
         nombre: "Lolita Dulce Maria"
     },

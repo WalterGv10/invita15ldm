@@ -3,9 +3,10 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaWhatsapp, FaPlus, FaMinus } from 'react-icons/fa';
+import { InvitationData } from '@/app/data';
 
 interface FinalSectionProps {
-    data: any;
+    data: InvitationData;
     delay: number;
 }
 

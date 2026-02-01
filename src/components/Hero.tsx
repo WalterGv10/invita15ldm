@@ -3,9 +3,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { GiTiara } from 'react-icons/gi';
+import { InvitationData } from '@/app/data';
 
 interface HeroProps {
-    data: any;
+    data: InvitationData;
     delay: number;
 }
 

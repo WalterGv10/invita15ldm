@@ -2,15 +2,16 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import { InvitationData } from '@/app/data';
 
 interface EventDetailsProps {
-    data: any;
+    data: InvitationData;
     delay: number;
 }
 
 const EventDetails: React.FC<EventDetailsProps> = ({ data, delay }) => {
     return (
-        <motion.div
+        <motion.section
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
@@ -56,7 +57,7 @@ const EventDetails: React.FC<EventDetailsProps> = ({ data, delay }) => {
                     </div>
                 </div>
             </div>
-        </motion.div>
+        </motion.section>
     );
 };
 

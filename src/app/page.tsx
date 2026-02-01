@@ -6,8 +6,34 @@ import Footer from "@/components/Footer";
 import { invitationData as data } from "./data";
 
 export default function Home() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "SocialEvent",
+    "name": `Mis 15 Años - ${data.quinceanera.nombre}`,
+    "description": data.bendicion,
+    "startDate": "2026-02-21T16:00",
+    "location": {
+      "@type": "Place",
+      "name": data.evento.lugar,
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Calzada Mopan",
+        "addressCountry": "GT"
+      }
+    },
+    "image": "https://15lolitadulcemaria.vercel.app/og-image.png",
+    "organizer": {
+      "@type": "Person",
+      "name": data.padres.mama
+    }
+  };
+
   return (
     <main className="relative min-h-screen selection:bg-gold/30 selection:text-gold-light">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Background with priority loading for LCP */}
       <VideoBackground videos={data.videos} />
 
