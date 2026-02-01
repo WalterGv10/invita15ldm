@@ -19,9 +19,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Mis 15 Años - Lolita Dulce Maria",
     description: "Te invito a celebrar conmigo este día tan especial.",
-    images: ["/og-image.jpg"],
-    url: "https://WalterGv10.github.io/invita15ldm",
+    images: ["/og-image.png"],
+    url: "https://15lolitadulcemaria.vercel.app/",
     type: "website",
+  },
+  icons: {
+    icon: "/logo.png",
+    apple: "/logo.png",
   },
 };
 
