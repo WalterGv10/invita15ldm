@@ -15,7 +15,7 @@ const FinalSection: React.FC<FinalSectionProps> = ({ data, delay }) => {
     const increment = () => setNumPeople(prev => Math.min(prev + 1, 15));
     const decrement = () => setNumPeople(prev => Math.max(prev - 1, 1));
 
-    const finalMessage = `Hola ${data.contacto.nombre}, confirmo mi asistencia a los 15 años de Lolita Dulce Maria. Seremos ${numPeople} ${numPeople === 1 ? 'persona' : 'personas'} en total.`;
+    const finalMessage = `Hola ${data.contacto.nombre}, confirmo mi asistencia a los 15 años de Lolita Dulce Maria. Estaremos presentes un total de ${numPeople} ${numPeople === 1 ? 'persona' : 'personas'}. ¡Muchas gracias por la invitación!`;
     const whatsappUrl = `https://wa.me/${data.contacto.telefono}?text=${encodeURIComponent(finalMessage)}`;
 
     return (
