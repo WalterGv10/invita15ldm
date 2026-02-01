@@ -30,8 +30,8 @@ const VideoBackground: React.FC<VideoBackgroundProps> = ({ videos }) => {
 
     return (
         <div className="fixed inset-0 -z-10 overflow-hidden bg-black">
-            {/* Texture layer / Polarizado */}
-            <div className="polarizado absolute inset-0 z-10 opacity-20 pointer-events-none"></div>
+            {/* Texture layer / Polarizado - Reduced complexity for performance */}
+            <div className="polarizado absolute inset-0 z-10 opacity-10 pointer-events-none"></div>
 
             {/* Main overlay / Vignette */}
             <div className="vignette absolute inset-0 z-5"></div>
@@ -41,13 +41,19 @@ const VideoBackground: React.FC<VideoBackgroundProps> = ({ videos }) => {
 
             <video
                 key={videoSrc}
-                src={videoSrc}
                 autoPlay
                 muted
                 loop
                 playsInline
-                className="absolute top-0 left-0 w-full h-full object-cover scale-[1.05]"
-            />
+                preload="auto"
+                className="absolute top-0 left-0 w-full h-full object-cover scale-[1.02] transition-opacity duration-1000"
+                style={{
+                    filter: 'brightness(0.7) contrast(1.1)',
+                    willChange: 'transform'
+                }}
+            >
+                <source src={videoSrc} type="video/mp4" />
+            </video>
         </div>
     );
 };
