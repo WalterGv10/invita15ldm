@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Pinyon_Script, Playfair_Display } from "next/font/google";
+import { Great_Vibes, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
-const pinyonScript = Pinyon_Script({
+const greatVibes = Great_Vibes({
   subsets: ["latin"],
   weight: "400",
   variable: "--font-script",
@@ -32,7 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className={`${pinyonScript.variable} ${playfairDisplay.variable}`}>
+      <body className={`${greatVibes.variable} ${playfairDisplay.variable}`}>
         {children}
       </body>
     </html>

@@ -40,7 +40,7 @@ export default function Home() {
       <div className="relative z-10">
         <Hero data={data} delay={0.5} />
 
-        <div className="max-w-5xl mx-auto px-4 flex flex-col gap-24">
+        <div className="max-w-5xl mx-auto px-4 flex flex-col gap-16 md:gap-24">
           <EventDetails data={data} delay={0.2} />
           <FinalSection data={data} delay={0.2} />
         </div>
