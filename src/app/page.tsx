@@ -20,7 +20,7 @@ const data = {
   },
   evento: {
     fecha: "Sábado, 21 de Febrero, 2026",
-    misa: "Santa Misa - 4:00 PM",
+    misa: "Santa Misa, Iglesia Católica de Calzada Mopan - 4:00 PM",
     recepcion: "Salon Social, Calzada Mopan - 6:00 PM",
     lugar: "Salon Social, Calzada Mopan"
   },
@@ -47,6 +47,21 @@ export default function Home() {
 
         {/* Decorative elements or spacer */}
         <div className="h-20" />
+
+        {/* Mini Footer */}
+        <footer className="w-full py-8 text-center bg-black/50 backdrop-blur-sm border-t border-gold/10">
+          <p className="text-gold-light/60 text-xs tracking-widest font-serif">
+            ¿TE GUSTAN MIS DISEÑOS? VISITA MI WEB
+          </p>
+          <a
+            href="https://walweb.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gold font-bold hover:text-gold-light transition-colors duration-300 text-sm mt-1 inline-block"
+          >
+            WALWEB.VERCEL.APP
+          </a>
+        </footer>
       </div>
     </main>
   );
