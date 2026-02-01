@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme {
+  --color-gold: #d4af37;
+  --color-gold-light: #f4cf57;
+  --color-overlay: rgba(0, 0, 0, 0.55);
+}
+
+:root {
+  --font-script: 'Pinyon Script', cursive;
+  --font-serif: 'Playfair Display', serif;
+}
+
+body {
+  @apply bg-black text-gold antialiased overflow-x-hidden;
+  font-family: var(--font-serif);
+}
+
+.text-glow {
+  text-shadow: 0 0 20px rgba(212, 175, 55, 0.7), 2px 2px 10px rgba(0, 0, 0, 0.9);
+}
+
+.text-glow-soft {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.shimmer {
+  animation: shimmer 4s infinite ease-in-out;
+}
+
+@keyframes shimmer {
+  0% {
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+  }
+
+  50% {
+    text-shadow: 0 0 25px rgba(212, 175, 55, 0.8), 0 0 10px rgba(212, 175, 55, 0.4);
+  }
+
+  100% {
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+  }
+}
+
+.polarizado {
+  background:
+    linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
+    linear-gradient(90deg, rgba(255, 0, 0, 0.04), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.04));
+  background-size: 100% 4px, 3px 100%;
+}
+
+.vignette {
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.85) 100%);
+}
