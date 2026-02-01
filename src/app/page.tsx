@@ -30,7 +30,7 @@ const data = {
   mensajeFinal: "Lo más importante es tu presencia",
   contacto: {
     nombre: "Lolita Veliz",
-    telefono: "502XXXXXXXX",
+    telefono: "50240311387",
     mensajeWhatsapp: "Hola, tengo una duda con respecto a los 15 años de Lolita Dulce Maria."
   }
 };
