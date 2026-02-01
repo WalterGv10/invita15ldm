@@ -16,6 +16,7 @@ const EventDetails: React.FC<EventDetailsProps> = ({ data, delay }) => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 1.5, delay: delay, ease: "easeOut" }}
+            style={{ willChange: 'transform, opacity' }}
             className="my-16 mx-auto p-6 sm:p-10 md:p-16 text-center glass-panel rounded-3xl max-w-[95%] md:max-w-3xl relative overflow-hidden"
         >
             {/* Elegant ornaments */}

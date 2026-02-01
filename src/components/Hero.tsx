@@ -24,6 +24,7 @@ const Hero: React.FC<HeroProps> = ({ data, delay }) => {
                     opacity: { duration: 2, delay: delay },
                     y: { duration: 4, repeat: Infinity, ease: "easeInOut" }
                 }}
+                style={{ willChange: 'transform, opacity' }}
                 className="text-gold text-5xl md:text-7xl mb-4 md:mb-6 filter drop-shadow(0 0 15px rgba(212,175,55,0.5))"
             >
                 <GiTiara />
@@ -34,6 +35,7 @@ const Hero: React.FC<HeroProps> = ({ data, delay }) => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 2, delay: delay + 0.5 }}
+                style={{ willChange: 'opacity' }}
                 className="text-lg md:text-2xl font-serif tracking-[0.2em] text-white/90 uppercase text-glow-soft"
             >
                 {data.textoPrincipal}
@@ -45,6 +47,7 @@ const Hero: React.FC<HeroProps> = ({ data, delay }) => {
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 2, delay: delay + 1.2, ease: "easeOut" }}
+                    style={{ willChange: 'transform, opacity' }}
                     className="text-7xl sm:text-8xl md:text-[12rem] font-script text-gold-gradient leading-[0.8] my-6 md:my-8 shimmer relative z-10 break-words"
                 >
                     {data.quinceanera.nombre}
@@ -58,6 +61,7 @@ const Hero: React.FC<HeroProps> = ({ data, delay }) => {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.5, delay: delay + 2.0 }}
+                style={{ willChange: 'transform, opacity' }}
                 className="text-base md:text-2xl max-w-[90%] md:max-w-[85%] leading-relaxed italic font-serif text-white/80 text-glow-soft mt-2 md:mt-4"
             >
                 {data.bendicion}
