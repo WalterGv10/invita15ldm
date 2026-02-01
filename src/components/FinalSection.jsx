@@ -13,9 +13,10 @@ const FinalSection = ({ data, delay }) => {
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 1.5 }}
                 style={{
-                    fontSize: '1.8rem',
+                    fontSize: '2.5rem',
                     fontFamily: 'var(--font-script)',
-                    marginBottom: '3rem'
+                    marginBottom: '3rem',
+                    textShadow: '2px 2px 5px rgba(0,0,0,0.5)'
                 }}
             >
                 “{data.mensajeFinal}”

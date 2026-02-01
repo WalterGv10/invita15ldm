@@ -20,22 +20,24 @@ const EventDetails = ({ data, delay }) => {
             }}
         >
             <div style={{ marginBottom: '3rem' }}>
-                <h3 style={{ fontSize: '1.2rem', color: 'var(--color-gold-light)', textTransform: 'uppercase', letterSpacing: '3px', marginBottom: '1rem' }}>Padres</h3>
-                <p style={{ fontSize: '1.8rem', fontFamily: 'var(--font-script)' }}>{data.padres.papa}</p>
-                <p style={{ fontSize: '1.8rem', fontFamily: 'var(--font-script)' }}>{data.padres.mama}</p>
+                <h3 style={{ fontSize: '1rem', color: 'var(--color-gold-light)', textTransform: 'uppercase', letterSpacing: '4px', marginBottom: '1rem', opacity: 0.8 }}>Padres</h3>
+                <p style={{ fontSize: '2.5rem', fontFamily: 'var(--font-script)', marginBottom: '0.5rem' }}>{data.padres.papa}</p>
+                <p style={{ fontSize: '2.5rem', fontFamily: 'var(--font-script)' }}>{data.padres.mama}</p>
             </div>
 
-            <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem' }}>Detalles del Evento</h2>
+            <h2 style={{ fontSize: '3rem', marginBottom: '2rem', textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>Detalles del Evento</h2>
 
-            <div style={{ display: 'grid', gap: '2rem', fontFamily: 'var(--font-serif)' }}>
+            <div style={{ display: 'grid', gap: '2.5rem', fontFamily: 'var(--font-serif)' }}>
                 <div>
-                    <h3 style={{ fontSize: '1.3rem', color: 'var(--color-gold-light)' }}>Fecha</h3>
-                    <p style={{ fontSize: '1.4rem' }}>{data.evento.fecha}</p>
+                    <h3 style={{ fontSize: '1.4rem', color: 'var(--color-gold-light)', marginBottom: '0.5rem' }}>Fecha</h3>
+                    <p style={{ fontSize: '1.6rem', letterSpacing: '1px' }}>{data.evento.fecha}</p>
                 </div>
                 <div>
-                    <h3 style={{ fontSize: '1.3rem', color: 'var(--color-gold-light)' }}>Actividades</h3>
-                    <p style={{ fontSize: '1.2rem', marginBottom: '0.5rem' }}>{data.evento.misa}</p>
-                    <p style={{ fontSize: '1.2rem' }}>{data.evento.recepcion}</p>
+                    <h3 style={{ fontSize: '1.4rem', color: 'var(--color-gold-light)', marginBottom: '0.8rem' }}>Actividades</h3>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                        <p style={{ fontSize: '1.3rem' }}>{data.evento.misa}</p>
+                        <p style={{ fontSize: '1.3rem' }}>{data.evento.recepcion}</p>
+                    </div>
                 </div>
             </div>
 

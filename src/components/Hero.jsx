@@ -38,10 +38,13 @@ const Hero = ({ data, delay }) => {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 1.5, delay: delay + 0.5, ease: "easeOut" }}
                 style={{
-                    fontSize: 'clamp(3rem, 10vw, 8rem)',
-                    lineHeight: '1.2',
-                    margin: '0.5rem 0 1.5rem 0',
-                    textShadow: '0 0 25px rgba(212,175,55,0.8), 0 0 10px rgba(0,0,0,0.9)', // Sombra combinada
+                    fontSize: 'clamp(4rem, 15vw, 11rem)', // Aún más grande
+                    lineHeight: '1.1',
+                    margin: '0.8rem 0 2rem 0',
+                    fontFamily: 'var(--font-script)', // Pinyon Script
+                    fontWeight: '400',
+                    color: 'var(--color-gold-light)',
+                    textShadow: '0 0 30px rgba(212,175,55,0.7), 2px 2px 10px rgba(0,0,0,0.9)',
                     zIndex: 10
                 }}
             >

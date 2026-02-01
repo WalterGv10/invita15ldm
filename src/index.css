@@ -3,7 +3,7 @@
   --color-gold-light: #f4cf57;
   --color-overlay: rgba(0, 0, 0, 0.55);
   /* Un poco más oscuro */
-  --font-script: 'Great Vibes', cursive;
+  --font-script: 'Pinyon Script', cursive;
   --font-serif: 'Playfair Display', serif;
   --text-glow: 0 0 15px rgba(212, 175, 55, 0.5);
 }
@@ -50,4 +50,22 @@ textarea {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+@keyframes shimmer {
+  0% {
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+  }
+
+  50% {
+    text-shadow: 0 0 25px rgba(212, 175, 55, 0.8), 0 0 10px rgba(212, 175, 55, 0.4);
+  }
+
+  100% {
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+  }
+}
+
+h1 {
+  animation: shimmer 4s infinite ease-in-out;
 }
