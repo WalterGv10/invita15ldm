@@ -6,14 +6,17 @@ const greatVibes = Great_Vibes({
   subsets: ["latin"],
   weight: "400",
   variable: "--font-script",
+  display: 'swap',
 });
 
 const playfairDisplay = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-serif",
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://15lolitadulcemaria.vercel.app/"),
   title: "Mis 15 Años - Lolita Dulce Maria",
   description: "Acompáñanos a celebrar los quince años de Lolita Dulce Maria. Un día lleno de bendición y alegría.",
   openGraph: {

@@ -46,9 +46,10 @@ const VideoBackground: React.FC<VideoBackgroundProps> = ({ videos }) => {
                 loop
                 playsInline
                 preload="auto"
+                poster="/video-poster.png"
                 className="absolute top-0 left-0 w-full h-full object-cover scale-[1.02] transition-opacity duration-1000"
                 style={{
-                    filter: 'brightness(0.7) contrast(1.1)',
+                    filter: 'brightness(0.6) contrast(1.1)',
                     willChange: 'transform'
                 }}
             >
