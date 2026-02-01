@@ -17,7 +17,7 @@ const EventDetails: React.FC<EventDetailsProps> = ({ data, delay }) => {
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 1.5, delay: delay, ease: "easeOut" }}
             style={{ willChange: 'transform, opacity' }}
-            className="my-16 mx-auto p-6 sm:p-10 md:p-16 text-center glass-panel rounded-3xl max-w-[95%] md:max-w-3xl relative overflow-hidden"
+            className="my-8 md:my-16 mx-auto p-4 sm:p-8 md:p-16 text-center glass-panel rounded-3xl max-w-[98%] md:max-w-3xl relative overflow-hidden"
         >
             {/* Elegant ornaments */}
             <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-gold/50 to-transparent"></div>
@@ -26,13 +26,13 @@ const EventDetails: React.FC<EventDetailsProps> = ({ data, delay }) => {
             {/* Parents Section */}
             <div className="mb-12 md:mb-16">
                 <h3 className="text-[10px] md:text-sm text-gold-light uppercase tracking-[0.3em] md:tracking-[0.5em] mb-4 md:mb-6 opacity-70 font-serif">Honrosamente Invitados por sus Padres</h3>
-                <div className="flex flex-col gap-2 md:gap-3">
-                    <p className="text-5xl sm:text-6xl md:text-7xl font-script text-white drop-shadow-lg">{data.padres.papa}</p>
-                    <p className="text-5xl sm:text-6xl md:text-7xl font-script text-white drop-shadow-lg">{data.padres.mama}</p>
+                <div className="flex flex-col gap-1 md:gap-3">
+                    <p className="text-4xl sm:text-5xl md:text-7xl font-script text-white drop-shadow-lg">{data.padres.papa}</p>
+                    <p className="text-4xl sm:text-5xl md:text-7xl font-script text-white drop-shadow-lg">{data.padres.mama}</p>
                 </div>
             </div>
 
-            <h2 className="text-5xl sm:text-7xl md:text-8xl mb-10 md:mb-12 text-gold-gradient font-script text-glow">Detalles del Evento</h2>
+            <h2 className="text-4xl sm:text-6xl md:text-8xl mb-8 md:mb-12 text-gold-gradient font-script text-glow">Detalles del Evento</h2>
 
             <div className="grid gap-8 md:gap-12 font-serif">
                 <div className="relative group">

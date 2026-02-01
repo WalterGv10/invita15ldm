@@ -12,7 +12,7 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({ data, delay }) => {
     return (
-        <section className="min-h-screen md:min-h-[110vh] flex flex-col items-center justify-center text-center px-4 py-12 md:p-8 gap-6 relative overflow-hidden">
+        <section className="min-h-screen md:min-h-[100vh] lg:min-h-[110vh] flex flex-col items-center justify-center text-center px-4 py-8 md:py-12 md:p-8 gap-4 md:gap-6 relative overflow-hidden">
             {/* Tiara / Crown */}
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -42,13 +42,13 @@ const Hero: React.FC<HeroProps> = ({ data, delay }) => {
             </motion.p>
 
             {/* Name */}
-            <div className="relative w-full">
+            <div className="relative w-full max-w-[100vw]">
                 <motion.h1
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 2, delay: delay + 1.2, ease: "easeOut" }}
                     style={{ willChange: 'transform, opacity' }}
-                    className="text-7xl sm:text-8xl md:text-[12rem] font-script text-gold-gradient leading-[0.8] my-6 md:my-8 shimmer relative z-10 break-words"
+                    className="text-6xl sm:text-7xl md:text-9xl lg:text-[12rem] font-script text-gold-gradient leading-[0.8] my-4 md:my-8 shimmer relative z-10 break-words"
                 >
                     {data.quinceanera.nombre}
                 </motion.h1>
@@ -62,7 +62,7 @@ const Hero: React.FC<HeroProps> = ({ data, delay }) => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.5, delay: delay + 2.0 }}
                 style={{ willChange: 'transform, opacity' }}
-                className="text-base md:text-2xl max-w-[90%] md:max-w-[85%] leading-relaxed italic font-serif text-white/80 text-glow-soft mt-2 md:mt-4"
+                className="text-sm sm:text-base md:text-xl lg:text-2xl max-w-[95%] md:max-w-[85%] leading-relaxed italic font-serif text-white/80 text-glow-soft mt-1 md:mt-4"
             >
                 {data.bendicion}
             </motion.p>
@@ -72,7 +72,7 @@ const Hero: React.FC<HeroProps> = ({ data, delay }) => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 2, delay: delay + 2.8, ease: "easeInOut" }}
-                className="mt-8 md:mt-12 pt-6 border-t border-gold/30 w-[90%] max-w-[650px] text-sm md:text-lg opacity-90 leading-relaxed font-serif tracking-wide"
+                className="mt-6 md:mt-12 pt-4 md:pt-6 border-t border-gold/30 w-[95%] max-w-[650px] text-[10px] sm:text-xs md:text-base lg:text-lg opacity-90 leading-relaxed font-serif tracking-wide"
             >
                 {data.versiculo}
             </motion.div>
