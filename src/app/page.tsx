@@ -1,3 +1,5 @@
+'use client';
+
 import VideoBackground from "@/components/VideoBackground";
 import Hero from "@/components/Hero";
 import EventDetails from "@/components/EventDetails";
