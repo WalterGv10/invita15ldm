@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaCrown } from 'react-icons/fa';
+import { GiTiara } from 'react-icons/gi';
 
 interface HeroProps {
     data: any;
@@ -25,7 +25,7 @@ const Hero: React.FC<HeroProps> = ({ data, delay }) => {
                 }}
                 className="text-gold text-5xl md:text-7xl mb-4 md:mb-6 filter drop-shadow(0 0 15px rgba(212,175,55,0.5))"
             >
-                <FaCrown />
+                <GiTiara />
             </motion.div>
 
             {/* Intro Text */}
