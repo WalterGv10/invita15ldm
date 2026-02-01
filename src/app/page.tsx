@@ -51,26 +51,30 @@ export default function Home() {
         {/* Decorative elements or spacer */}
         <div className="h-20" />
 
-        {/* Mini Footer - Elegant Minimalist Branding */}
-        <footer className="w-full py-16 text-center border-t border-gold/5 mt-20">
+        {/* Mini Footer - Elegant Branding */}
+        <footer className="w-full py-12 text-center bg-gradient-to-t from-black to-transparent border-t border-gold/5 mt-20">
           <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="flex flex-col items-center gap-1"
+            className="flex flex-col items-center gap-2"
           >
+            <p className="text-gold-light/40 text-[10px] uppercase tracking-[0.4em] font-serif">
+              Diseño Exclusivo por
+            </p>
             <a
               href="https://walweb.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative px-8 py-2"
+              className="group relative"
             >
-              <span className="text-4xl md:text-5xl font-script text-gold-gradient tracking-widest transition-all duration-700 group-hover:drop-shadow-[0_0_15px_rgba(212,175,55,0.8)] filter drop-shadow(0 0 5px rgba(212,175,55,0.3))">
-                Walweb
+              <span className="text-3xl md:text-4xl font-bold tracking-[0.3em] text-gold-gradient shimmer filter drop-shadow(0 0 15px rgba(212,175,55,0.4)) group-hover:drop-shadow(0 0 25px rgba(212,175,55,0.7)) transition-all duration-500">
+                WALWEB
               </span>
-              {/* Animated underline effect */}
-              <div className="absolute bottom-1 left-1/2 -translate-x-1/2 w-0 h-[1px] bg-gradient-to-r from-transparent via-gold-light to-transparent transition-all duration-700 group-hover:w-full opacity-60"></div>
             </a>
+            <p className="text-gold-light/20 text-[9px] mt-4 tracking-widest uppercase">
+              Hecho con ❤️ para momentos inolvidables
+            </p>
           </motion.div>
         </footer>
       </div>
