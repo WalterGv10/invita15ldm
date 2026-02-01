@@ -34,11 +34,20 @@ const data = {
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen">
+    <main className="relative min-h-screen selection:bg-gold/30 selection:text-gold-light">
       <VideoBackground videos={data.videos} />
-      <Hero data={data} delay={0.5} />
-      <EventDetails data={data} delay={0.2} />
-      <FinalSection data={data} delay={0.2} />
+
+      <div className="relative z-10">
+        <Hero data={data} delay={0.5} />
+
+        <div className="max-w-5xl mx-auto px-4 flex flex-col gap-24">
+          <EventDetails data={data} delay={0.2} />
+          <FinalSection data={data} delay={0.2} />
+        </div>
+
+        {/* Decorative elements or spacer */}
+        <div className="h-20" />
+      </div>
     </main>
   );
 }

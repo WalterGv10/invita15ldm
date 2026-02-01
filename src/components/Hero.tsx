@@ -11,13 +11,19 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({ data, delay }) => {
     return (
-        <section className="min-h-screen flex flex-col items-center justify-center text-center p-8 gap-4 relative">
-            {/* Tiara */}
+        <section className="min-h-[110vh] flex flex-col items-center justify-center text-center p-8 gap-6 relative overflow-hidden">
+            {/* Tiara / Crown */}
             <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 1.5, delay: delay, ease: "easeInOut" }}
-                className="text-gold text-6xl mb-4"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{
+                    opacity: 1,
+                    y: [0, -15, 0],
+                }}
+                transition={{
+                    opacity: { duration: 2, delay: delay },
+                    y: { duration: 4, repeat: Infinity, ease: "easeInOut" }
+                }}
+                className="text-gold text-7xl mb-6 filter drop-shadow(0 0 15px rgba(212,175,55,0.5))"
             >
                 <FaCrown />
             </motion.div>
@@ -26,28 +32,32 @@ const Hero: React.FC<HeroProps> = ({ data, delay }) => {
             <motion.p
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: 1.5, delay: delay }}
-                className="text-xl md:text-2xl font-serif tracking-widest text-glow-soft"
+                transition={{ duration: 2, delay: delay + 0.5 }}
+                className="text-xl md:text-2xl font-serif tracking-[0.2em] text-white/90 uppercase text-glow-soft"
             >
                 {data.textoPrincipal}
             </motion.p>
 
             {/* Name */}
-            <motion.h1
-                initial={{ opacity: 0, scale: 0.5 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 1.5, delay: delay + 0.5, ease: "easeOut" }}
-                className="text-7xl md:text-9xl font-script text-gold-light leading-tight my-4 text-glow shimmer"
-            >
-                {data.quinceanera.nombre}
-            </motion.h1>
+            <div className="relative">
+                <motion.h1
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 2, delay: delay + 1.2, ease: "easeOut" }}
+                    className="text-8xl md:text-[12rem] font-script text-gold-gradient leading-[0.8] my-8 shimmer relative z-10"
+                >
+                    {data.quinceanera.nombre}
+                </motion.h1>
+                {/* Subtle backglow for the name */}
+                <div className="absolute inset-0 bg-gold/10 blur-[100px] pointer-events-none rounded-full"></div>
+            </div>
 
             {/* Blessing */}
             <motion.p
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1.5, delay: delay + 1.0 }}
-                className="text-lg md:text-xl max-w-[80%] leading-relaxed italic mb-8 text-glow-soft"
+                transition={{ duration: 1.5, delay: delay + 2.0 }}
+                className="text-lg md:text-2xl max-w-[85%] leading-relaxed italic font-serif text-white/80 text-glow-soft mt-4"
             >
                 {data.bendicion}
             </motion.p>
@@ -56,8 +66,8 @@ const Hero: React.FC<HeroProps> = ({ data, delay }) => {
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: 1.5, delay: delay + 1.5, ease: "easeInOut" }}
-                className="mt-8 pt-4 border-t border-gold/20 max-w-[600px] text-base opacity-90 leading-relaxed"
+                transition={{ duration: 2, delay: delay + 2.8, ease: "easeInOut" }}
+                className="mt-12 pt-6 border-t border-gold/30 max-w-[650px] text-base md:text-lg opacity-90 leading-relaxed font-serif tracking-wide"
             >
                 {data.versiculo}
             </motion.div>

@@ -52,15 +52,18 @@ const VideoBackground: React.FC<VideoBackgroundProps> = ({ videos }) => {
 
     if (!videoSrc) return null;
 
-    const commonClass = "absolute top-0 left-0 w-full h-full object-cover scale-110 transition-opacity duration-[1500ms] ease-in-out";
+    const commonClass = "absolute top-0 left-0 w-full h-full object-cover scale-[1.05] transition-opacity duration-[2000ms] ease-in-out";
 
     return (
         <div className="fixed inset-0 -z-10 overflow-hidden bg-black">
-            {/* Capa de Polarizado */}
-            <div className="polarizado absolute inset-0 z-4 opacity-35 pointer-events-none"></div>
+            {/* Texture layer / Polarizado */}
+            <div className="polarizado absolute inset-0 z-10 opacity-20 pointer-events-none"></div>
 
-            {/* Vignette */}
-            <div className="vignette absolute inset-0 z-2"></div>
+            {/* Main overlay / Vignette */}
+            <div className="vignette absolute inset-0 z-5"></div>
+
+            {/* Cinematic soft edges */}
+            <div className="absolute inset-0 z-[6] pointer-events-none shadow-[inset_0_0_150px_rgba(0,0,0,0.9)]"></div>
 
             <video
                 ref={videoRefA}
